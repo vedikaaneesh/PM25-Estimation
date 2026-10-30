@@ -1,0 +1,39 @@
+# Study area configuration
+# South India: Kerala, Karnataka, Tamil Nadu, Andhra Pradesh, Telangana
+# Kerala is the monsoon focus sub-region
+
+states:
+  - Kerala
+  - Karnataka
+  - Tamil Nadu
+  - Andhra Pradesh
+  - Telangana
+
+# Bounding box for South India (approximate, [west, south, east, north])
+bbox:
+  west: 74.0
+  south: 8.0
+  east: 85.0
+  north: 19.0
+
+# Kerala focus region for monsoon analysis
+kerala_bbox:
+  west: 74.0
+  south: 8.0
+  east: 78.0
+  north: 13.0
+
+# Spatial resolution for grid extraction (degrees)
+# ~0.01 deg ≈ 1.1 km, ~0.025 deg ≈ 2.75 km
+spatial_resolution: 0.025
+
+# Buffer sizes to test for station satellite sampling (km)
+station_buffer_km:
+  - 5
+  - 10
+
+# OpenAQ API (v3 requires an API key)
+# Get one at https://explore.openaq.org/
+openaq:
+  base_url: "https://api.openaq.org/v3"
+  api_key: ""  # Set via environment variable OPENAQ_API_KEY instead

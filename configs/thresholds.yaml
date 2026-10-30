@@ -1,0 +1,31 @@
+# Data quality and completeness thresholds
+
+# Station completeness: minimum daily completeness to include a station
+station_completeness:
+  min_daily_pct: 70     # percent of daily readings over study period
+  min_years: 1          # at least N years of data
+
+# PM2.5 physical plausibility (µg/m³)
+pm25_qc:
+  min_value: 0
+  max_value: 1000
+  spike_zscore: 5
+  flatline_window_hours: 24
+  flatline_tolerance: 0.1
+
+# TROPOMI QA thresholds (to confirm against product docs in Stage 2)
+tropomi_qa:
+  no2_min_qa: 0.5
+  co_min_qa: 0.5
+  so2_min_qa: 0.5
+  hcho_min_qa: 0.5
+  cloud_fraction_max: 0.3
+
+# MAIAC AOD QA (to confirm against MCD19A2 docs in Stage 2)
+maiac_qa:
+  min_valid_qa: 0
+
+# Deduplication
+dedup:
+  coordinate_tolerance_deg: 0.005  # ~500 m
+  name_similarity_threshold: 0.85

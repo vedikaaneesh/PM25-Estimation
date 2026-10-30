@@ -1,0 +1,5 @@
+run_id,timestamp,stage,model,tier,feature_set,split_type,rmse,mae,r2,bias,pearson_r,notes
+20261030_205307,2026-10-30T20:53:07.415022,5_baselines,random_forest,tier_a,,temporal,8.608,,0.6067,,,
+20261030_205310,2026-10-30T20:53:10.724391,5_baselines,random_forest,tier_b,,temporal,8.478,,0.6185,,,
+20261030_205414,2026-10-30T20:54:14.685301,5_baselines,random_forest,tier_a,,temporal,8.608,,0.6067,,,
+20261030_205417,2026-10-30T20:54:17.665174,5_baselines,random_forest,tier_b,,temporal,8.478,,0.6185,,,

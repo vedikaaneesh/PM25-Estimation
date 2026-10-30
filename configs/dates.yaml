@@ -1,0 +1,34 @@
+# Date range and seasonal definitions
+# Period to be confirmed after station audit
+
+study_period:
+  start: "2021-01-01"
+  end: "2024-12-31"
+
+# Season definitions for South India / monsoon analysis
+# Southwest monsoon: June-September
+# Northeast monsoon: October-December
+# Pre-monsoon: March-May
+# Post-monsoon / winter: January-February
+seasons:
+  pre_monsoon:
+    months: [3, 4, 5]
+    label: "pre-monsoon"
+  sw_monsoon:
+    months: [6, 7, 8, 9]
+    label: "southwest-monsoon"
+  ne_monsoon:
+    months: [10, 11, 12]
+    label: "northeast-monsoon"
+  post_monsoon:
+    months: [1, 2]
+    label: "post-monsoon"
+
+# Monsoon focus months for Kerala analysis
+monsoon_focus_months: [6, 7, 8, 9]
+
+# Timezone
+timezone:
+  ist: "Asia/Kolkata"
+  utc: "UTC"
+  ist_offset_hours: 5.5

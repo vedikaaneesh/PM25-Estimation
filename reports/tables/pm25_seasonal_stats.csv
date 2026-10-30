@@ -1,0 +1,21 @@
+state,season,mean,median,std,p25,p75,n
+Andhra Pradesh,northeast-monsoon,42.77,36.95,24.08,26.39,55.87,2286
+Andhra Pradesh,post-monsoon,49.32,42.88,25.6,30.13,62.38,1256
+Andhra Pradesh,pre-monsoon,32.52,29.36,20.15,21.48,39.64,1890
+Andhra Pradesh,southwest-monsoon,22.54,21.2,12.3,13.43,29.42,2528
+Karnataka,northeast-monsoon,30.89,25.35,18.55,18.25,39.08,7411
+Karnataka,post-monsoon,36.9,33.0,31.58,22.87,45.93,4549
+Karnataka,pre-monsoon,30.49,27.08,16.11,19.77,38.39,6941
+Karnataka,southwest-monsoon,17.95,16.54,10.24,12.12,21.64,9022
+Kerala,northeast-monsoon,29.68,28.69,12.66,22.09,35.35,1686
+Kerala,post-monsoon,40.34,38.06,14.58,30.02,48.51,1206
+Kerala,pre-monsoon,31.87,30.45,13.91,21.87,40.09,1774
+Kerala,southwest-monsoon,23.8,24.92,12.83,17.2,30.19,2096
+Tamil Nadu,northeast-monsoon,35.52,27.51,26.15,16.83,47.93,3090
+Tamil Nadu,post-monsoon,39.24,34.83,25.76,23.32,48.52,1880
+Tamil Nadu,pre-monsoon,23.46,20.0,15.08,12.63,31.41,2812
+Tamil Nadu,southwest-monsoon,20.93,18.83,10.87,13.41,25.91,3665
+Telangana,northeast-monsoon,45.76,40.09,24.05,27.32,63.34,3929
+Telangana,post-monsoon,50.88,49.58,23.53,34.91,63.99,2078
+Telangana,pre-monsoon,41.1,38.29,25.12,29.58,49.55,3176
+Telangana,southwest-monsoon,23.1,21.71,17.94,14.04,29.64,4813

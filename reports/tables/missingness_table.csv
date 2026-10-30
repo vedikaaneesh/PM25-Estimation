@@ -1,0 +1,10 @@
+variable,source,overall_pct,sw_monsoon_pct,post_monsoon_pct
+pm25_ground,XKDR/CPCB,100.0,100.0,100.0
+era5_blh,GEE,100.0,100.0,100.0
+era5_land,GEE,95.9,95.9,95.9
+maiac_aod,GEE,0.0,0.0,0.0
+s5p_aer_ai,GEE,100.0,100.0,100.0
+s5p_co,GEE,100.0,100.0,100.0
+s5p_hcho,GEE,100.0,99.9,100.0
+s5p_no2,GEE,99.9,99.8,100.0
+s5p_so2,GEE,99.9,99.9,100.0

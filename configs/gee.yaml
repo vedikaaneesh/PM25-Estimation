@@ -1,0 +1,14 @@
+# Google Earth Engine configuration
+# The private key file must NOT be stored in the repo.
+# Place it at ~/.config/earthengine/pm25-service-account-key.json
+# or set private_key_path below.
+
+project_id: "kochi-pm25-research"
+service_account: "pm2-5-research@kochi-pm25-research.iam.gserviceaccount.com"
+private_key_path: "~/.config/earthengine/pm25-service-account-key.json"
+
+# Export settings (respect GEE limits)
+export:
+  chunk_months: 1       # export one month at a time
+  max_pixels: 1000000000
+  file_format: "CSV"     # point extractions; GeoTIFF for grids later

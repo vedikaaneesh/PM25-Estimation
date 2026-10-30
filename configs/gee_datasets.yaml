@@ -1,0 +1,126 @@
+# GEE dataset configuration for point extraction at station coordinates.
+# All dataset IDs and band names verified against GEE Data Catalog.
+# See docs/data_dictionary.md for full details.
+
+datasets:
+  # Sentinel-5P TROPOMI (satellite gases + aerosol index)
+  s5p_no2:
+    collection: "COPERNICUS/S5P/OFFL/L3_NO2"
+    bands:
+      - name: "tropospheric_NO2_column_number_density"
+        output: "tropomi_no2_column"
+        unit: "mol/m2"
+      - name: "cloud_fraction"
+        output: "tropomi_cloud_fraction"
+        unit: "fraction"
+    qa_band: "qa_value"
+    qa_threshold: 75   # GEE qa_value is 0-100; >75 for tropospheric NO2
+    scale: 1.0
+    temporal: "daily"
+
+  s5p_co:
+    collection: "COPERNICUS/S5P/OFFL/L3_CO"
+    bands:
+      - name: "CO_column_number_density"
+        output: "tropomi_co_column"
+        unit: "mol/m2"
+    qa_band: "qa_value"
+    qa_threshold: 50
+    scale: 1.0
+    temporal: "daily"
+
+  s5p_so2:
+    collection: "COPERNICUS/S5P/OFFL/L3_SO2"
+    bands:
+      - name: "SO2_column_number_density"
+        output: "tropomi_so2_column"
+        unit: "mol/m2"
+    qa_band: "qa_value"
+    qa_threshold: 50
+    scale: 1.0
+    temporal: "daily"
+
+  s5p_hcho:
+    collection: "COPERNICUS/S5P/OFFL/L3_HCHO"
+    bands:
+      - name: "tropospheric_HCHO_column_number_density"
+        output: "tropomi_hcho_column"
+        unit: "mol/m2"
+    qa_band: "qa_value"
+    qa_threshold: 50
+    scale: 1.0
+    temporal: "daily"
+
+  s5p_aer_ai:
+    collection: "COPERNICUS/S5P/OFFL/L3_AER_AI"
+    bands:
+      - name: "absorbing_aerosol_index"
+        output: "tropomi_uv_aerosol_index"
+        unit: "dimensionless"
+    qa_band: "qa_value"
+    qa_threshold: 80
+    scale: 1.0
+    temporal: "daily"
+
+  # MAIAC AOD
+  maiac_aod:
+    collection: "MODIS/061/MCD19A2_GRANULES"
+    bands:
+      - name: "Optical_Depth_055"
+        output: "maiac_aod_055"
+        unit: "unitless"
+      - name: "Optical_Depth_047"
+        output: "maiac_aod_047"
+        unit: "unitless"
+    qa_band: "AOD_QA"
+    qa_threshold: 0      # AOD_QA==0 means best quality; verify bit flags
+    scale: 0.001         # MAIAC AOD stored as int, divide by 1000
+    temporal: "daily"
+
+  # ERA5-Land (meteorology)
+  era5_land:
+    collection: "ECMWF/ERA5_LAND/HOURLY"
+    bands:
+      - name: "temperature_2m"
+        output: "era5_temperature"
+        unit: "K"
+      - name: "dewpoint_temperature_2m"
+        output: "era5_dewpoint"
+        unit: "K"
+      - name: "u_component_of_wind_10m"
+        output: "era5_u_wind"
+        unit: "m/s"
+      - name: "v_component_of_wind_10m"
+        output: "era5_v_wind"
+        unit: "m/s"
+      - name: "total_precipitation"
+        output: "era5_precipitation"
+        unit: "m"
+    qa_band: null
+    scale: 1.0
+    temporal: "hourly"
+
+  # ERA5 single levels (boundary-layer height)
+  era5_blh:
+    collection: "ECMWF/ERA5/HOURLY"
+    bands:
+      - name: "boundary_layer_height"
+        output: "era5_blh"
+        unit: "m"
+    qa_band: null
+    scale: 1.0
+    temporal: "hourly"
+
+  # CAMS aerosol reanalysis
+  cams_aod:
+    collection: "ECMWF/CAMS/NRT"
+    bands:
+      - name: "total_aerosol_optical_depth_at_550nm_surface"
+        output: "cams_aod"
+        unit: "dimensionless"
+      - name: "particulate_matter_d_less_than_25_um_surface"
+        output: "cams_pm25_surface"
+        unit: "kg/m3"
+    qa_band: null
+    scale: 1.0
+    temporal: "3hourly"

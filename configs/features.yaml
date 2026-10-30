@@ -1,0 +1,75 @@
+# Tier A: full feature set (satellite + reanalysis + met + static)
+# Tier B: fallback (no satellite, for cloudy days)
+
+tier_a:
+  satellite:
+    - tropomi_no2_column
+    - tropomi_co_column
+    - tropomi_so2_column
+    - tropomi_hcho_column
+    - tropomi_uv_aerosol_index
+    - tropomi_cloud_fraction
+    - maiac_aod
+  reanalysis:
+    - cams_aod
+  meteorology:
+    - era5_temperature
+    - era5_dewpoint_temp
+    - era5_u_wind
+    - era5_v_wind
+    - era5_precipitation
+    - era5_blh
+    - era5_relative_humidity
+  temporal:
+    - day_of_year_sin
+    - day_of_year_cos
+    - month
+    - season_label
+  static:
+    - elevation
+    - distance_to_coast
+    - land_cover_class
+    - road_density
+    - population_density
+  lags:
+    - pm25_lag_1
+    - pm25_lag_2
+    - pm25_lag_3
+    - temp_lag_1
+    - rh_lag_1
+  flags:
+    - satellite_available
+    - valid_pixel_count
+    - cloud_fraction_bin
+
+tier_b:
+  reanalysis:
+    - cams_aod
+  meteorology:
+    - era5_temperature
+    - era5_dewpoint_temp
+    - era5_u_wind
+    - era5_v_wind
+    - era5_precipitation
+    - era5_blh
+    - era5_relative_humidity
+  temporal:
+    - day_of_year_sin
+    - day_of_year_cos
+    - month
+    - season_label
+  static:
+    - elevation
+    - distance_to_coast
+    - land_cover_class
+    - road_density
+    - population_density
+  lags:
+    - pm25_lag_1
+    - pm25_lag_2
+    - pm25_lag_3
+    - temp_lag_1
+    - rh_lag_1
+  flags:
+    - satellite_available
+    - valid_pixel_count

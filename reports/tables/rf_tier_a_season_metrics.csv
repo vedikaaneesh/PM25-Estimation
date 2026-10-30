@@ -1,0 +1,6 @@
+rmse,mae,r2,bias,pearson_r,n,label,season
+10.749,8.079,0.4185,1.266,0.655,215,northeast-monsoon,northeast-monsoon
+8.608,6.365,0.6067,0.919,0.7825,807,overall,overall
+10.359,8.139,0.5496,2.742,0.7851,131,post-monsoon,post-monsoon
+7.465,5.594,0.5717,0.947,0.7756,197,pre-monsoon,pre-monsoon
+6.13,4.664,0.5255,-0.29,0.7537,264,southwest-monsoon,southwest-monsoon

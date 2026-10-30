@@ -1,0 +1,5 @@
+rmse,mae,r2,bias,pearson_r,n,label,feature_set,n_features
+8.499,6.215,0.6166,0.386,0.786,807,met_only,met_only,15
+8.719,6.474,0.5965,1.071,0.7763,807,met+s5p_gases,met+s5p_gases,21
+8.719,6.474,0.5965,1.071,0.7763,807,met+s5p+aerosol,met+s5p+aerosol,21
+8.592,6.347,0.6082,0.886,0.7834,807,all_tier_a,all_tier_a,23
